@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Button from './Button';
 
 class Clicker extends Component {
 
@@ -35,15 +36,21 @@ class Clicker extends Component {
                         <div className="mx-auto display-1">{this.state.count}</div>
                     </div>
                     <div className="clicker-button-panel d-flex flex-row">
-                        <button className="btn btn-success w-100" onClick={this.incrementCount}>
-                            <i className="fa fa-plus fa-2x"></i>
-                        </button>
-                        <button className="btn btn-warning w-100" onClick={this.resetCount}>
-                            <i className="fa fa-refresh fa-2x"></i>
-                        </button>
-                        <button className="btn btn-danger w-100" onClick={this.decrementCount}>
-                            <i className="fa fa-minus fa-2x"></i>
-                        </button>
+                        <Button
+                            className="btn btn-success w-100"
+                            icon="fa fa-plus fa-2x"
+                            onClick={this.incrementCount}
+                        />
+                        <Button
+                            className="btn btn-warning w-100"
+                            icon="fa fa-refresh fa-2x"
+                            onClick={this.resetCount}
+                        />
+                        <Button
+                            className="btn btn-danger w-100"
+                            icon="fa fa-minus fa-2x"
+                            onClick={this.decrementCount}
+                        />
                     </div>
                 </div>
             </div>
